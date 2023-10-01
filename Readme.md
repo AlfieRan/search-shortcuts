@@ -23,7 +23,7 @@ For example to go to the youtube home page you could type `!yt` or `!youtube`, a
 
 #### 2. Account shortcuts
 
-Account are shortcuts that try and take you to an account on the website referenced by the shortcut, they also allow you
+Account shortcuts try to take you to an account on the website referenced by the shortcut, whilst also allowing you
 to navigate to a specific page on the website. To use an account shortcut type `@` followed by the shortcut name,
 then if you want to search for something, type a space and then your search query.
 
