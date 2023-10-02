@@ -47,7 +47,7 @@ export const shortcuts: Record<AvailableShortcuts, ShortcutData> = {
 	'linear': LinearData,
 	'lin': LinearData,
 	'vercel': { baseUrl: 'https://vercel.com/', searchUrl: 'https://vercel.com/', accountUrl: 'https://vercel.com/%s' },
-	'fly': { baseUrl: 'https://fly.io/', searchUrl: 'https://fly.io/', accountUrl: 'https://fly.io/dashboard/%s' },
+	'fly': { baseUrl: 'https://fly.io/dashboard', searchUrl: 'https://fly.io/dashboard', accountUrl: 'https://fly.io/dashboard/%s' },
 
 	// Streaming
 	'netflix': { baseUrl: 'https://www.netflix.com', searchUrl: 'https://www.netflix.com/search?q=%s' },
