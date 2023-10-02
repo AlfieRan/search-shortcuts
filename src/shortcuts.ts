@@ -11,7 +11,7 @@ type ShortcutData = {
 // Start by adding the aliases for your shortcut here, they're split into multiple arrays for organization so please
 // keep them that way :)
 const socialShortcuts = ['insta', 'instagram', 'twt', 'twitter', 'yt', 'youtube', 'twitch', 'linkedin']  as const;
-const devShortcuts = ['github', 'gh'] as const;
+const devShortcuts = ['github', 'gh', 'lin', 'linear', 'vercel', 'fly'] as const;
 const streamingShortcuts = ['netflix', 'prime'] as const;
 const shoppingShortcuts = ['amazon', 'ebay'] as const;
 const miscShortcuts = ['gdrive'] as const;
@@ -26,6 +26,8 @@ const GithubData = { baseUrl: 'https://www.github.com/', searchUrl: 'https://git
 const InstagramData = { baseUrl: 'https://instagram.com', searchUrl: 'https://www.instagram.com/explore/tags/%s', accountUrl: 'https://www.instagram.com/%s/' };
 const TwitterData = { baseUrl: 'https://twitter.com', searchUrl: 'https://twitter.com/search?q=%s', accountUrl: 'https://twitter.com/%s' };
 const YoutubeData = { baseUrl: 'https://youtube.com', searchUrl: 'https://www.youtube.com/results?search_query=%s',  accountUrl: "https://youtube.com/@%s" };
+
+const LinearData = { baseUrl: 'https://linear.app', searchUrl: 'https://linear.app/%s', accountUrl: 'https://linear.app/%s' };
 
 // Then map your aliases to the shortcut data in this object
 export const shortcuts: Record<AvailableShortcuts, ShortcutData> = {
@@ -42,6 +44,10 @@ export const shortcuts: Record<AvailableShortcuts, ShortcutData> = {
 	// Dev
 	'github': GithubData,
 	'gh': GithubData,
+	'linear': LinearData,
+	'lin': LinearData,
+	'vercel': { baseUrl: 'https://vercel.com/', searchUrl: 'https://vercel.com/', accountUrl: 'https://vercel.com/%s' },
+	'fly': { baseUrl: 'https://fly.io/', searchUrl: 'https://fly.io/', accountUrl: 'https://fly.io/dashboard/%s' },
 
 	// Streaming
 	'netflix': { baseUrl: 'https://www.netflix.com', searchUrl: 'https://www.netflix.com/search?q=%s' },
