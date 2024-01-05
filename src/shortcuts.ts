@@ -14,10 +14,10 @@ const socialShortcuts = ['insta', 'instagram', 'twt', 'twitter', 'yt', 'youtube'
 const devShortcuts = ['github', 'gh', 'lin', 'linear', 'vercel', 'fly'] as const;
 const streamingShortcuts = ['netflix', 'prime'] as const;
 const shoppingShortcuts = ['amazon', 'ebay'] as const;
-const miscShortcuts = ['gdrive', 'gmail', 'gcal'] as const;
+const googleShortcuts = ['gdrive', 'gmail', 'gcal'] as const;
 
 // If you create a new organization array, add it to this array
-const availableShortcuts = [...socialShortcuts, ...devShortcuts, ...streamingShortcuts, ...shoppingShortcuts, ...miscShortcuts] as const;
+const availableShortcuts = [...socialShortcuts, ...devShortcuts, ...streamingShortcuts, ...shoppingShortcuts, ...googleShortcuts] as const;
 type AvailableShortcuts = (typeof availableShortcuts)[number];
 
 // If you want to add multiple aliases for a shortcut, define the shortcut data here
@@ -81,7 +81,11 @@ export const shortcuts: Record<AvailableShortcuts, ShortcutData> = {
 	ebay: { baseUrl: 'https://www.ebay.co.uk', searchUrl: 'https://www.ebay.co.uk/sch/i.html?_nkw=%s' },
 
 	// Misc
-	gdrive: { baseUrl: 'https://drive.google.com', searchUrl: 'https://drive.google.com/drive/search?q=%s' },
+	gdrive: {
+		baseUrl: 'https://drive.google.com',
+		searchUrl: 'https://drive.google.com/drive/search?q=%s',
+		accountUrl: 'https://drive.google.com/drive/u/%s/my-drive',
+	},
 	gmail: GmailData,
 	gcal: GcalendarData,
 };
